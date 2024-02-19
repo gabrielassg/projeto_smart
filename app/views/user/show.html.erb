@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @usuario %>
+
+<div>
+  <%= link_to "Edit this plano", edit_plano_path(@usuario)> |
+  <%= link_to "Back to planos", usuario_path %>
+
+  <%= button_to "Destroy this plano", @usuario, method: :delete %>
+</div>

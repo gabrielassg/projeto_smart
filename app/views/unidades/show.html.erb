@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @unidades%>
+
+<div>
+  <%= link_to "Edit this plano", edit_plano_path(@unidades) %> |
+  <%= link_to "Back to planos", planos_path %>
+
+  <%= button_to "Destroy this plano", @unidades method: :delete %>
+</div>

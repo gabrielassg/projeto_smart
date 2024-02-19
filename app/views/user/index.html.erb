@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Criação de Usuários - Smart </h1>
+<h1> Teste </h1>
+<p> "Aqui pode ser criados usuários Smart"
+<div id="usuário">
+  <% @user.each do |plano| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this plano", user %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New usuário", new_plano_path %>
