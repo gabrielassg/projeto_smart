@@ -10,7 +10,7 @@ def create
 
   end
     def unidade_requisitos
-    params.require(:unidade).permit(:cidade, :estado, :endereco, :pais)
+    params.require(:unidade).permit(:nome , :cidade, :estado, :endereco, :pais)
   end
 def index
   puts params.inspect

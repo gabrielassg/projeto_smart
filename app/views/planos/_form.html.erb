@@ -11,9 +11,18 @@
     </div>
   <% end %>
 
+
   <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :unidade, style: "display: block" %>
+    Selecionar uma unidade: 
+    <% unidades_array = Unidade.all.map { |unidade| [unidade.nome, unidade.id] } %>
+    <%= form.select(:unidades, options_for_select(unidades_array)) %>
+
   </div>
 
   <div>

@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_12_180829) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_20_181947) do
   create_table "planos", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "unidade_id"
+    t.index ["unidade_id"], name: "index_planos_on_unidade_id"
   end
 
   create_table "unidades", force: :cascade do |t|

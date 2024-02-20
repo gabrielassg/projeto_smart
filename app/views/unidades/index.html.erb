@@ -2,13 +2,13 @@
 
 <h1>Unidades - Smart </h1>
 <h1> "Crie a unidade aqui"</h1>
-<div id="unidade">
+<div id="unidades">
   <% @unidades.each do |unidade| %>
-    <%= render unidade %>
+    <%= render partial: "unidades", locals:{unidade:unidade} %>
     <p>
-      <%= link_to "Mostre essa unidade, unidade" %>
+      <%= link_to "Mostre essa unidade", unidade_path(unidade) %>
     </p>
-    <%= debug(params.inspect) %>
+  
   <% end %>
   
 </div>
